@@ -10,11 +10,9 @@ if ( isset( $_GET['id'] )) {
     $result  = $conn->query($sql);
 
     if ($result == TRUE) {
-
         echo "Record deleted successfully.";
         header("location: index.php");
         exit();
-
     }else{
 
         echo "Error:" . $sql . "<br>" . $conn->error;

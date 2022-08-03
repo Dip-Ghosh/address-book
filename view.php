@@ -15,10 +15,7 @@ require_once "edit-query.php";
             <div class="card">
                 <div class="card-header">View Address book</div>
                 <div class="card-body">
-
-
-                    <form  method="POST">
-                        <input type="hidden" name="id" value="<?php echo $id; ?>">
+                    <form >
                         <div class="row">
                             <div class="col-md-6">
                                 <div class="form-group">
@@ -78,7 +75,7 @@ require_once "edit-query.php";
 
                         </div>
 
-                        <a href="index.php" class="btn btn-secondary ml-2">Cancel</a>
+                        <a href="index.php" class="btn btn-secondary ml-2">Back</a>
                     </form>
 
                 </div>

@@ -5,10 +5,12 @@ require_once "config.php";
 if ( isset( $_GET['id'] )) {
 
     $id      = $_GET['id'];
+
     $sql     = "Select * FROM `contacts` WHERE `id`='$id'";
     $result  = $conn->query($sql);
-    $cities  = "select * from cities where status=1";
-    $cities  = $conn->query($cities);
+
+    $areas   = "select * from `cities` where status=1";
+    $cities  = $conn->query($areas);
 
     while($res = mysqli_fetch_array($result))
     {
@@ -20,6 +22,7 @@ if ( isset( $_GET['id'] )) {
         $street     = $res['street'];
         $zipCode    = $res['zip_code'];
     }
+
     $conn->close();
 
 }

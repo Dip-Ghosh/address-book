@@ -3,7 +3,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Create Record</title>
+    <title>Create Address book</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
 </head>
 <body>
@@ -12,7 +12,7 @@
         <div class="row">
             <div class="col-md-8 offset-2">
                 <div class="card">
-                    <div class="card-header">Create Record</div>
+                    <div class="card-header">Create Address Book</div>
                     <div class="card-body">
                         <?php   require "create-query.php"; ?>
                         <form method="POST">
