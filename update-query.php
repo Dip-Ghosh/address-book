@@ -2,8 +2,9 @@
 
 require_once "config.php";
 
-if ( isset( $_POST['save']) ) {
+if ( isset( $_POST['update']) ) {
 
+    $id          = $_POST['id'];
     $name        = isset($_POST['name']) ? $_POST['name'] : '';
     $firstName   = isset($_POST['firstName']) ? $_POST['firstName'] : '';
     $email       = isset($_POST['email']) ? $_POST['email'] : '';
@@ -11,8 +12,16 @@ if ( isset( $_POST['save']) ) {
     $street      = isset($_POST['street']) ? $_POST['street'] :'';
     $zipCode     = isset($_POST['zipCode']) ? $_POST['zipCode'] : '';
 
-    $sql = "INSERT INTO `contacts` (`name`, `first_name`, `email`, `city_id`, `street`, `zip_code`) 
-            VALUES('$name','$firstName','$email','$city','$street','$zipCode')";
+    $sql = "UPDATE `contacts` 
+        SET
+            `first_name` = '$firstName',
+            `name`      = '$name',
+            `email`     = '$email',
+            `city_id`   = '$city',
+            `street`    = '$street',
+            `zip_code`  = '$zipCode'
+        
+        WHERE `id`='$id'";
 
     $result = $conn->query($sql) ;
 

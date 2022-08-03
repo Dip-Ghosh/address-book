@@ -15,7 +15,7 @@
                     <div class="card-header">Create Record</div>
                     <div class="card-body">
                         <?php   require "create-query.php"; ?>
-                        <form action="create-query.php" method="POST">
+                        <form method="POST">
                             <div class="row">
                                 <div class="col-md-6">
                                     <div class="form-group">
@@ -43,11 +43,10 @@
                                     <div class="form-group">
                                         <label>City</label>
                                         <?php
-
                                         require_once "config.php";
-
                                         $cities =  "select * from cities where status=1";
                                         $cities = $conn->query($cities);
+                                        $conn->close();
                                         ?>
                                         <select class="form-control" name="city" id="city-id">
                                             <?php
